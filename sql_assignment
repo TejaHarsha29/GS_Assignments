@@ -1,0 +1,32 @@
+Assignment 1:
+
+CREATE TABLE department (
+    dept_no INT PRIMARY KEY,
+    dept_name text,
+    dept_location text
+);
+
+
+CREATE TABLE employee (
+    emp_no INT PRIMARY KEY,
+    emp_name text,
+    emp_age INT CHECK (emp_age >= 18),
+    emp_gender CHAR(1) CHECK (emp_gender IN ('M', 'F')),
+    dept_no INT,
+    FOREIGN KEY (dept_no) REFERENCES department(dept_no) ON DELETE CASCADE
+);
+
+
+
+
+Assignment 2:
+
+create table course(course_id int,course_name text);
+
+CREATE TABLE Course_copy AS SELECT * FROM Course;
+
+ALTER TABLE Course_copy ADD column1 INT,ADD column2 VARCHAR(255);
+
+alter table course_copy drop column course_id,drop column column1;
+
+ALTER TABLE Course_copy CHANGE course_name new_name text;
