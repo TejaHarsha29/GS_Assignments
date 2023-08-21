@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <title>Document</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    background-color:skyblue;
+}
+ input{
+    margin: 10px 20px;
+ } 
+ .container{
+    padding:20px;
+    width: 50%;
+ }
+â€‹
+ .reset{
+    background-color: rgb(128, 126, 0);
+    padding:5px 10px;
+    margin:10px;
+ }
+â€‹
+ .submit{
+    background-color: green;
+    padding:5px 10px;
+    margin:10px;
+ }
+â€‹
+ h1{
+    text-align: center;
+ }
+    </style>
+</head>
+​
+<body>
+    <h1>Forms</h1>
+    <form class="form" method="post">
+        <div class="container">
+        <label>Enter First Name:</label>
+        <input type="text" name="fname" required autofocus /><br>
+        <label>Enter Last Name:</label>
+        <input type="text" name="lname" /><br>
+        <label>Date of Birth:</label>
+        <input type="date" name="date" /> <br>
+        <label>Enter Age:</label>
+        <input type="number" name=age min="10" max="100" required /><br>
+        <label>Please select your gender:</label>
+        <input type="radio" name="gender" value="male" />Male
+        <input type="radio" name="gender" value="female" />Female<br>
+        <label>Please select your country:</label>
+        <select name="country">
+            <option value="0">Please select an option</option>
+            <option value="1">India</option>
+            <option value="2">USA</option>
+            <option value="3">UK</option>
+            <option value="4">China</option>
+            <option value="5">Australia</option>
+            <option value="6">Japan</option>
+        </select><br>
+        <label>Please select your qualification:</label><br>
+        <input type="checkbox" name="Btech" />Btech<br>
+        <input type="checkbox" name="Mtech" />Mtech<br>
+        <input type="checkbox" name="MBA" />MBA
+        <br>
+        <label>Comments:</label>
+        <textarea name="address" rows="2" cols="10">Enter address</textarea><br>
+        <label>Mobile number:</label>
+        <input type="tel" name="mobile number" /><br>
+        <label>Email:</label>
+        <input type="email" name="email" required placeholder="abc@example.com" /> <br>
+        <label>Password:</label>
+        <input type="password" name="password" /> <br>
+        <label>How do you know about us:</label>
+        <input type="url" name="url" list="url-list">
+        <datalist id="url-list">
+            <option value="http://google.com"></option>
+            <option value="http://facebook.com"></option>
+            <option value="http://bing.com"></option>
+        </datalist><br>
+        <button class= "submit" type="submit"> Submit </button>
+        <button class="reset" type="Reset"> Reset </button> <br>
+    </div>
+    </form>
+</body>
+​
+</html>
