@@ -1,0 +1,27 @@
+body {
+    background-color: lightgrey;
+}
+
+table.highlight-table {
+    width: 50%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    background-color: lightgrey;
+}
+
+table.highlight-table th, table.highlight-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+table.highlight-table th {
+    background-color: white;
+    font-weight: bold;
+}
+
+table.highlight-table tr:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
