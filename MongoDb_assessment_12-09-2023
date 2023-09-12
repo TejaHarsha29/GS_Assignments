@@ -1,0 +1,21 @@
+Assignment
+Q1:
+db.employees.insertOne({ Name: "John Smith", Position: "Software Engineer", Department: "Engineering", Salary: 85000, Hire_Date: "2023-01-15" });
+
+Q2:
+db.employees.updateMany( { Position: "Software Engineer" }, { $set: { Salary: 90000 } } );
+
+Q3:
+db.employees.find({ Department: "Engineering", Salary: { $gt: 80000 } });
+
+Q4:
+db.employees.deleteMany({ Department: "Marketing" });
+
+Q5:
+db.orders.insertMany([{order_date: ISODate("2023-06-15T12:00:00Z"),total_price: 500,order_by: “Teja”},{order_date: ISODate("2023-08-20T12:00:00Z"), total_price: 750,order_by: “Harsha”}]);
+
+db.orders.aggregate([ { $match: { order_date: { $gte: ISODate("2023-06-01T00:00:00Z"), $lt: ISODate("2023-09-12T00:00:00Z")  } } }, { $group: { _id: null, total_Revenue: { $sum: "$total_price" } } }] )
+
+Q6:
+db.products.createIndex({"product_code":1});
+db.products.getIndexes();
